@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url('Wallpaper/Default.jpg') no-repeat;
+	background-size: cover;
+	height: 100vh;
+	/*padding-top: 2.5vh;*/
+}
+
+header {
+/*	position: fixed;
+	top: 0;
+	left: 0;*/
+	height: 2.5vh;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	padding: 5px 15px 0 15px;
+	/*border: 1px solid lightyellow;*/
+}
+/*heads up bar*/
+header>svg:first-child {
+	float: left;
+	color: pink;
+}
+
+header>svg:last-child {
+	float: right;
+	color: red;
+}
+/*main app area*/
+.main {
+	/*border: 1px solid deeppink;*/
+	position: relative;
+	height: 84.5vh;
+	padding: 45px 38px 38px 38px;
+}
+
+.filter {
+	backdrop-filter: brightness(0.9);
+	-webkit-backdrop-filter: brightness(0.9);
+}
+/*app layout starts here*/
+.app:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.card {
+	float: left;
+	width: calc((100% - (38px * 8)) / 4);
+	height: calc((84.5vh - (44px * 6)) / 6);
+	margin: 0 38px 34px 38px;
+	text-align: center;
+}
+
+.card img {
+	max-width: 100%;
+	border-radius: 25%;
+}
+
+.card p {
+	font-size: 25px;
+	color: #D7D6DB;
+
+}
+
+/*page indicators here*/
+.pagination {
+	position: absolute;
+	bottom: 10px;
+	left: calc(50% - (110px / 2));
+}
+
+.pagination-btn {
+	display: inline-block;
+	margin: 0 8px;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background-color: white;
+	opacity: 0.5;
+}
+/*dock*/
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 13vh;
+	/*border: 1px solid blueviolet;*/
+	padding: 34px 38px;
+}
+
+footer:before {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+footer img {
+	float: left;
+	width: calc((100% - (38px * 8)) / 4);
+	margin: 0 38px;
+	border-radius: 25%;
+}
